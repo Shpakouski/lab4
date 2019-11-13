@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Product">
+        <plugin disabled="false" name="Shpakouski_Discount_Plugin_Frontend_Magento_Catalog_Model_Product" sortOrder="10"
+                type="Shpakouski\Discount\Plugin\Frontend\Magento\Catalog\Model\Product"/>
+    </type>
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="shpakouski_discount_config_provider" xsi:type="object">
+                    Shpakouski\Discount\Model\ConfigProvider
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

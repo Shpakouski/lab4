@@ -1,0 +1,8 @@
+<?php
+/** @var Shpakouski\Discount\Block\Message $block */
+?>
+<?php if ($block->getMessage()): ?>
+    <div class="total-message">
+        <span><?php echo $block->getMessage() ?></span>
+    </div>
+<?php endif; ?>
